@@ -1,0 +1,806 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Bold.eot');
+    src: url('./fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Raleway-Bold.woff2') format('woff2'),
+        url('./fonts/Raleway-Bold.woff') format('woff'),
+        url('.fonts/Raleway-Bold.ttf') format('truetype'),
+        url('./fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Regular.eot');
+    src: url('./fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Raleway-Regular.woff2') format('woff2'),
+        url('./fonts/Raleway-Regular.woff') format('woff'),
+        url('./fonts/Raleway-Regular.ttf') format('truetype'),
+        url('./fonts/Raleway-Regular.svg#Raleway-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body
+{
+    font-family: Raleway, arial, sans-serif;
+}
+    
+
+h1
+{
+    font-style: bold;
+    font-size: 31px;
+}
+
+h2
+{
+    font-style: bold;
+    font-size: 25px;
+}
+
+h4
+{
+    font-size: 18px;
+}
+
+p
+{
+    font-size: 17px;
+}
+
+li
+{
+    font-size:18px;
+    list-style-type:none;
+    color: #000000;
+}
+
+a
+{
+    color:black;
+    text-decoration:none;
+}
+/* header */
+
+#logo_reservia
+{
+    height: 50px;
+    width:auto;
+    margin-left: 40px;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+header ul 
+{
+    display:flex;
+}
+
+header li
+{
+    margin-right: 40px;
+}
+
+header a:hover
+{
+    color:#0065FC ;
+    border-top: solid;
+    border-color: #0065FC ;
+    padding-top: 20px;
+    border-width: auto;
+}
+
+header a:focus
+{
+    color:#0065FC ;
+    border-top: solid;
+    border-color: #0065FC ;
+    padding-top: 20px;
+    border-width: auto;
+}
+
+.phoneinscription
+{
+    display: none;
+}
+
+/* Design header for phones */
+
+@media screen and (max-width: 768px)
+{
+    .filtres
+    {
+        display: none;
+    }
+
+
+    header a:focus  
+    {
+        border-top: none;
+        border-bottom:solid;
+        padding-bottom: 20px;
+    }
+
+    header a:hover 
+    {
+        border-top: none;
+        border-bottom:solid;
+        padding-bottom: 20px;
+    }
+
+    header 
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logo_reservia
+    {
+        width: 18%;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    #phoneheader
+    {
+        display: flex;
+        justify-content: space-between;
+        vertical-align: middle;
+    }
+
+    .phoneinscription
+    {
+        margin-top: 20px;
+        margin-right: 20px;
+        color:#0065FC ;
+        font-weight: bold;
+        margin-right: 20px;
+        display: inline-block;
+    }
+
+
+}
+
+/* Section Intro Main */
+
+#intro
+{
+    margin-left: 40px;
+    line-height: 10px;
+}
+
+@media screen and (max-width: 768px)
+{
+    #intro
+    {
+        margin-left: 10px;
+    }
+}
+
+/* search button */
+
+.searchform
+{
+    display: flex;
+    justify-content:left;
+    max-width: 30%;
+}
+
+#recherche 
+{
+    background-color:#F2F2F2;
+    max-width: 50px;
+    font-size: 18px;
+    flex: 1;
+    border-radius: 12px 0px 0px 12px ;
+    text-align:center;
+    padding:20px;
+}
+
+input
+{
+    border:solid;
+    border-right: none;
+    border-width: 2px;
+    border-color:#F2F2F2;
+    padding: 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right:20px;
+    font-size: 18px;
+    margin-right: 0px;
+    flex:2;
+}
+
+::placeholder
+{
+    color: #CECECE;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+button
+{
+    border:none;
+    padding: 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right:20px;
+    font-size: 18px;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border-radius: 0px 12px 12px 0px;
+    font-size: 17px;
+    flex:1.5;
+}
+
+.fa-info
+{
+    color: #0065FC;
+    font-size: 10px;
+    border: solid;
+    border-width: 2.5px;
+    padding:6px;
+    border-color: #F2F2F2;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+/* Section filtres de recherche */
+
+#filtres
+{
+    margin-top: 15px;
+    position: relative;
+}
+
+
+#filtres p
+{
+    margin-left:40px;
+}
+
+@media screen and (max-width: 768px)
+{
+    #filtres p 
+    {
+        margin-left: 10px;
+    }
+
+    #filtres
+    {
+        margin-left:10px;
+    }
+}
+
+#filtres_nav
+{
+    margin-left:40px;
+    display: flex;
+    justify-content:start;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px)
+{
+    #filtres_nav
+    {
+        margin-left: 10px;
+    }
+}
+
+#filtres_nav h2
+{
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+#list
+{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+#list i 
+{
+    color:#0065FC;
+    background-color: #DEEBFF;
+    padding:18px;
+    border-radius: 50px;
+    margin-left: 0;
+    margin-right: 10px;
+    position: relative;
+}
+
+#list a
+{
+    margin-right: 40px;
+    border-style: solid;
+    border-width: 2.5px 2.5px 2.5px 0px;
+    border-radius: 30px;
+    padding: 15px 15px 15px 0px;
+    border-color: #F2F2F2;
+    font-weight: bold;
+    position: relative;
+}
+
+#list li 
+    {
+        margin-bottom: 10px;
+    }
+  
+
+/* Design section filtres for phones */
+
+@media screen and (max-width: 1024px)
+{
+   h1 
+   {
+       font-size: 20px;
+   }
+}
+
+@media screen and (max-width: 768px)
+{
+    h1 
+    {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #filtres_nav
+    {
+        flex-direction: column;
+    }
+
+    #filtres_nav h2 
+    {
+        text-align: left;
+    }
+
+    #list a 
+    {
+        margin-right:20px;
+    }
+
+    .infocon
+    {
+        margin-right: 20px;
+    }
+
+  
+}
+
+@media screen and (max-width: 1024px)
+{
+    #filtres_nav
+    {
+        flex-direction: column;
+    }
+}
+
+/* Hostels section */
+
+#hotel_marseille 
+{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 768px)
+{
+    #hotel_marseille
+    {
+        flex-flow:column-reverse;
+        margin-right:0px;
+        margin-left: 0px;
+    }
+}
+
+
+/* left side marseille hostels */
+
+
+#hosting
+{
+    display: flex;
+    flex-direction: row;
+    background-color: #F2F2F2;
+    position: relative;
+    flex:2.4;
+    margin-right: 40px;
+    padding: 10px 0px 0px 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+@media screen and (max-width: 768px)
+{
+    #hosting
+    {
+        margin-bottom: 20px;
+        max-width: 100%;
+        margin-right:0px;
+        margin-left:0px;
+        border-radius:0px;
+        background-color: white;
+    }
+}
+
+#hosting p
+{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#hosting_marseille h2
+{
+    margin-left: 10px;
+}
+
+#hotels
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.hostelcard
+{
+    background-color: white;
+    max-width:260px;
+    padding:5px;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 9px 1px rgba(0,0,0,0.18);
+    line-height: 15px;
+}
+
+@media screen and (max-width: 768px)
+{
+    .hostelcard 
+    {
+        max-width: 100%;
+    }
+}
+
+
+
+.hostelcard:hover
+{
+    transform: scale(1.03);
+}
+
+.hostfigure
+{
+    margin: 0;
+}
+
+.hostfigure figcaption
+{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.hostpricing
+{
+    margin-left: 10px;
+}
+
+.pic_host
+{
+    height:110px;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* Star icons design */
+
+.stariconshost
+{
+    color: #0065FC;
+    margin-left:10px;
+    font-size: 12px;
+}
+
+.staricons
+{
+    color:#0065FC;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.greystar
+{
+    color: #F2F2F2;
+}
+
+/* Right side design most pop hostels */
+
+.fa-chart-line
+{
+    margin-left: 50px;
+}
+
+aside
+{
+    flex:1;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    
+}
+
+@media screen and (max-width: 768px)
+{
+    aside
+    {
+        max-width: 100%;
+        border-radius: 0px;
+        margin-right: 0px;
+        background-color:#F2F2F2;
+    }
+}
+
+aside h2
+{
+    margin-left: 20px;
+}
+
+aside figcaption
+{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#mostpop
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+.cardhost
+{
+    padding:none;
+    background-color: white;
+    max-width:330px;
+    padding:5px;
+    max-height: 150px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 9px 1px rgba(0,0,0,0.18);
+
+}
+
+@media screen and (max-width: 768px)
+{
+    .cardhost 
+    {
+        max-width: 100%;
+    }
+}
+
+
+.cardhost:hover
+{
+    transform: scale(1.03);
+}
+
+.hotelpop
+{
+    margin:0;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.hotelpop img
+{
+    width:30%;
+    object-fit: cover;
+    height:120px;
+    max-width:40%;
+    max-height: 100%;
+    margin-right: 10px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+
+/* Activités marseilles */
+
+#activities
+{
+    margin-top: 60px;
+    position: relative;
+}
+
+#selectedActivities
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height:400px;
+    max-width: 100%;
+    margin-right: 40px;
+    margin-left:40px;
+    position:relative
+}
+
+@media screen and (max-width: 768px)
+{
+    #selectedActivities
+    {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin-right:10px;
+        margin-left: 10px;
+    }
+}
+
+#Firstcard, #thirdcard, #secondcards, #fourthcard
+{
+    background-color: white;
+    max-height:100%;
+    margin-right: 40px;
+    width: 100%;
+}
+
+#Firstcard .ActivityCard, #thirdcard .ActivityCard
+{
+    max-height: 100%;
+}
+
+.ActivityCard
+{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 2px 9px 1px rgba(0,0,0,0.18);
+    margin:0;
+    padding-bottom: 20px;
+    box-shadow: 1px 2px 9px 1px rgba(0,0,0,0.18);
+}
+
+@media screen and (max-width: 768px)
+{
+    .ActivityCard 
+    {
+        max-height:100%;
+        margin-bottom: 20px;
+    }
+}
+
+.ActivityCard:hover
+{
+    transform: scale(1.03);
+}
+
+.details 
+{
+    margin:0;
+}
+
+#secondcards, #fourthcard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#Firstcard img, #thirdcard img
+{
+    object-fit: cover;
+    height: 350px;
+    max-height: 100%;
+    max-width:100%;
+    width:100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+@media screen and (max-width: 768px)
+{
+    #Firstcard img, #thirdcard img
+    {
+        height: 130px;
+    }
+}
+
+
+#secondcards img, #fourthcard img
+{
+    object-fit: cover;
+    height: 130px;
+    max-height:100%;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.ActivityCard figcaption
+{
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#activities h2
+{
+    margin-left: 40px;
+}
+
+/* Design footer */
+
+footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+    margin-top: 60px;
+    background-color: #F2F2F2;
+    margin-left:0;
+}
+
+@media screen and (max-width: 768px)
+{
+    footer 
+    {
+        flex-direction: column;
+    }
+}
+
+.colonnes
+{
+    align-items: baseline;
+    margin-right: 150px;
+    line-height: 30px;
+}
+
+.colonnes h4 
+{
+    margin-left: 35px;
+    margin-bottom: 0;
+}
+
+.colonnes li 
+{
+    font-size: 14px;
+}
